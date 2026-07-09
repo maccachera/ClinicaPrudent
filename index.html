@@ -732,11 +732,9 @@
 </footer>
 
 <script>
-  // ATENÇÃO: número de WhatsApp não informado pelo cliente.
-  // Substituir "SEUNUMEROAQUI" pelo número real no formato internacional, ex: "5524999999999"
-  var WHATSAPP_NUMBER = "SEUNUMEROAQUI";
+  var WHATSAPP_NUMBER = "5524988140072";
   var WHATSAPP_MESSAGE = "Olá! Gostaria de agendar uma consulta na Prudent Consultórios Odontológicos.";
-  var whatsappHref = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(WHATSAPP_MESSAGE);
+  var whatsappHref = "https://api.whatsapp.com/send?phone=" + WHATSAPP_NUMBER + "&text=" + encodeURIComponent(WHATSAPP_MESSAGE);
   document.querySelectorAll(".js-whatsapp").forEach(function(el){
     el.setAttribute("href", whatsappHref);
     el.setAttribute("target", "_blank");
